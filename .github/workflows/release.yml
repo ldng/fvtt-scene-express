@@ -63,3 +63,4 @@ jobs:
         with:
           package-token: ${{ secrets.FVTT_PACKAGE_API_KEY }}
           manifest-url: https://github.com/${{github.repository}}/releases/download/${{github.ref_name}}/module.json
+          notes-url: https://github.com/ldng/fvtt-scene-express/releases/tag/${{github.ref_name}}
