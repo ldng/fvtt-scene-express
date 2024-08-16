@@ -1,0 +1,41 @@
+{
+  "id": "scene-express",
+  "title": "Scene Express",
+  "version": "0.0.1",
+  "url": "https://github.com/ldng/fvtt-scene-express",
+  "compatibility": {
+    "minimum": "12",
+    "verified": "12"
+  },
+  "authors": [
+    {
+      "name": "Ludovic Danigo <ldng+gh@free.fr>",
+      "flags": {}
+    }
+  ],
+  "esmodules": [
+    "./scene-express.mjs"
+  ],
+    "styles": [
+    "styles/scene-express.css"
+  ],
+  "languages": [
+    {
+      "lang": "en",
+      "name": "English",
+      "path": "lang/en.json"
+    },
+    {
+      "lang": "es",
+      "name": "Español",
+      "path": "lang/es.json"
+    },
+    {
+      "lang": "fr",
+      "name": "Français",
+      "path": "lang/fr.json"
+    }
+  ],
+  "manifest": "__PLACEHOLDER__",
+  "download": "__PLACEHOLDER__"
+}
