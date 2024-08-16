@@ -38,8 +38,9 @@ jobs:
       # Creates the ZIP artifact.
       - name: 📦 Create ZIP Archive
         run: |
+          mkdir dist
           cp module.json dist/module.json
-          cp -r src/* dist/ -r
+          cp -r src/* dist/
           cd dist/
           zip -r ../module.zip *
 
