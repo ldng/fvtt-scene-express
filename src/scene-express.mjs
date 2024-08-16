@@ -15,6 +15,13 @@ Hooks.once('init', async function () {
 });
 
 Hooks.once('ready', async function () {
+  game.scene_express_drop = await new DragDrop({
+    callbacks: {
+      drop: handleDrop
+    }
+  });
+  Hooks.on("renderSidebarTab", onRenderSidebarTab);
+  ui.sidebar.tabs.scenes.render();
   console.log("Scene Express | Ready");
 });
 
@@ -85,24 +92,17 @@ const handleDrop = async (event) => {
   }
 }
 
-Hooks.on("renderSidebarTab", async (app, html, data) => {
+const onRenderSidebarTab = async (app, html, _) => {
   // Exit early if necessary;
-  if (!('scene_express_drop' in game)) {
-    game.scene_express_drop = await new DragDrop({
-      callbacks: {
-        drop: handleDrop
-      }
-    });
-  }
   if (app.tabName !== "scenes") return;
-  /*
-    const enableSceneExpress = game.settings.get("scene-express", "enableSceneExpress");
-    if (!enableSceneExpress)
-      return;
-  */
+
+  const enableSceneExpress = game.settings.get("scene-express", "enableSceneExpress");
+  if (!enableSceneExpress) {
+    return;
+  }
 
   let footer = html.find(".directory-footer");
   const content = await renderTemplate("modules/scene-express/templates/dropzone.html", {});
   footer.before(content);
   game.scene_express_drop.bind(document.getElementById("scene-express-dropzone"));
-});
+}
