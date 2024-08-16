@@ -1,5 +1,19 @@
 const RE_TO_SPACE = /[_+]/g;
 
+Hooks.once('init', async function () {
+  console.log("Scene Express | Initializing");
+
+  game.settings.register('scene-express', 'enableSceneExpress', {
+    name: 'Enable Scene Express',
+    hint: 'Control whether Scene Express is enabled or not.',
+    scope: 'world',
+    config: true,
+    requiresReload: true,
+    type: Boolean,
+    default: true
+  });
+});
+
 Hooks.once('ready', async function () {
   console.log("Scene Express | Ready");
 });
