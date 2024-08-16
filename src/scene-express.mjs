@@ -55,9 +55,8 @@ const createScene = async (savedFile) => {
       fogExploration: false,
     }
   );
-  scene.createThumbnail().then(data => {
-    scene.update({thumb: data.thumb}, {diff: false});
-  });
+  const data = await scene.createThumbnail();
+  await scene.update({thumb: data.thumb}, {diff: false});
 }
 
 const handleDrop = async (event) => {
@@ -66,7 +65,7 @@ const handleDrop = async (event) => {
 
   const savedFiles = Array.from(event.dataTransfer.files).map(
     async file => await handleFile(file)
-  )
+  );
   for await (const savedFile of savedFiles) {
     await createScene(savedFile);
   }
@@ -74,7 +73,6 @@ const handleDrop = async (event) => {
 
 Hooks.on("renderSidebarTab", async (app, html, data) => {
   // Exit early if necessary;
-  console.log("Scene Express | " + app.tabName);
   if (!('scene_express_drop' in game)) {
     game.scene_express_drop = await new DragDrop({
       callbacks: {
