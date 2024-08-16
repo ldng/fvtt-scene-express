@@ -6,14 +6,20 @@ Hooks.once('ready', async function () {
 
 const handleFile = async (file) => {
   if (!Object.values(CONST.IMAGE_FILE_EXTENSIONS).includes(file.type)) {
-    ui.notifications.error(`File "${ file.name }" is not an image.`, {permanent: true});
+    ui.notifications.error(
+      game.i18n.format('SCENE_EXPRESS.UNHANDLED_IMAGE', {fileName: file.name}),
+      {permanent: true}
+    );
     return {}
   }
 
   const futur_scene_name = file.name.split(".")[0].replace(RE_TO_SPACE, " ")
   let scene = game.scenes.find(scene => scene.name === futur_scene_name);
   if (scene) {
-    ui.notifications.error(`Scene "${ futur_scene_name }" already exists.`, {permanent: true});
+    ui.notifications.error(
+      game.i18n.format('SCENE_EXPRESS.SCENE_EXISTS', {sceneName: futur_scene_name }),
+      {permanent: true}
+    );
     return {}
   }
 

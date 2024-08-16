@@ -1,6 +1,8 @@
 {
   "SCENE_EXPRESS": {
     "TITLE": "Scène Express",
-    "DROPZONE": "Glisser une ou plusieurs image(s)"
+    "DROPZONE": "Glisser une ou plusieurs images",
+    "UNHANDLED_IMAGE": "Le fichier '{fileName}' n'est pas une image prise en charge.",
+    "SCENE_EXISTS": "La scene '{sceneName}' existe déjà."
   }
 }

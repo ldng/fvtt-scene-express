@@ -1,6 +1,8 @@
 {
   "SCENE_EXPRESS": {
     "TITLE": "Escena Exprés",
-    "DROPZONE": "Arrastrar imágene(s)"
+    "DROPZONE": "Arrastre alguna(s) imagen(es)",
+    "UNHANDLED_IMAGE": "El archivo '{fileName}' no es una imagen compatible.",
+    "SCENE_EXISTS": "La escena '{sceneName}' ya existe."
   }
 }

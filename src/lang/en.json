@@ -1,6 +1,8 @@
 {
   "SCENE_EXPRESS": {
     "TITLE": "Scene Express",
-    "DROPZONE": "Drag in some image(s)"
+    "DROPZONE": "Drag in some image(s)",
+    "UNHANDLED_IMAGE": "File '{fileName}' is not a supported image.",
+    "SCENE_EXISTS": "Scene '{sceneName}' already exists."
   }
 }
