@@ -10,6 +10,3 @@ the image will be uploaded to the server and  a new scene will be created with t
 as the background and the file name as the scene name.
 
 The image will be uploaded in the scene directory or the current world directory.
-
-Warning: At the moment, the module does not check if the image is already in the server,
-and will upload the image again, overwriting the existing one.
