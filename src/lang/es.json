@@ -1,8 +1,18 @@
 {
   "SCENE_EXPRESS": {
     "TITLE": "Escena Exprés",
+    "ENABLE": "Enable Scene Express",
+    "ENABLE_HINT": "Control whether Scene Express is enabled or not.",
+    "ERROR_BEHAVIOR": "Imagen ya existente",
+    "ERROR_BEHAVIOR_HINT": "Qué hacer cuando ya exista una imagen con el mismo nombre.",
+    "ERROR_BEHAVIOR_1": "Parrar y notificar el error",
+    "ERROR_BEHAVIOR_2": "Crear nueva escena con el archivo existente",
+    "ERROR_BEHAVIOR_3": "Sobrescribir el archivo existente y crear una nueva escena con él",
+    "IMMEDIATELY_ACTIVE": "Activo en seguida",
+    "IMMEDIATELY_ACTIVE_HINT": "La escena se crea activa o no (sólo cuando se suelta un único archivo nuevo).",
     "DROPZONE": "Arrastre alguna(s) imagen(es)",
     "UNHANDLED_IMAGE": "El archivo '{fileName}' no es una imagen compatible.",
-    "SCENE_EXISTS": "La escena '{sceneName}' ya existe."
+    "SCENE_EXISTS": "La escena '{sceneName}' ya existe.",
+    "FILE_EXISTS": "El archivo '{fileName}' ya existe."
   }
 }

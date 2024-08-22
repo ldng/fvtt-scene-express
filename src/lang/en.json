@@ -1,8 +1,18 @@
 {
   "SCENE_EXPRESS": {
     "TITLE": "Scene Express",
+    "ENABLE": "Enable Scene Express",
+    "ENABLE_HINT": "Control whether Scene Express is enabled or not.",
+    "FILE_EXISTS_BEHAVIOR": "Image already exists",
+    "FILE_EXISTS_BEHAVIOR_HINT": "What to do when an image with the same name already exists.",
+    "FILE_EXISTS_BEHAVIOR_1": "Stop & Notify error",
+    "FILE_EXISTS_BEHAVIOR_2": "Create new scene with existing file",
+    "FILE_EXISTS_BEHAVIOR_3": "Overwrite existing file and create new scene with it",
+    "IMMEDIATELY_ACTIVE": "Instantly active",
+    "IMMEDIATELY_ACTIVE_HINT": "The scene is created active or not (only when dropping a new single file).",
     "DROPZONE": "Drag in some image(s)",
     "UNHANDLED_IMAGE": "File '{fileName}' is not a supported image.",
-    "SCENE_EXISTS": "Scene '{sceneName}' already exists."
+    "SCENE_EXISTS": "Scene '{sceneName}' already exists.",
+    "FILE_EXISTS": "File '{fileName}' already exists."
   }
 }
