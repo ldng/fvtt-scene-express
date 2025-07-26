@@ -53,8 +53,11 @@ Hooks.once('ready', async function () {
       drop: handleDrop
     }
   });
-  Hooks.on("renderSidebarTab", onRenderSidebarTab);
-  ui.sidebar.tabs.scenes.render();
+  if (game.release.generation >= 13) {
+    Hooks.on("renderAbstractSidebarTab", onRenderSidebarTab);
+  } else {
+    Hooks.on("renderSidebarTab", onRenderSidebarTab);
+  }
   console.log("Scene Express | Ready");
 });
 
@@ -190,8 +193,23 @@ const onRenderSidebarTab = async (app, html, _) => {
     return;
   }
 
-  let footer = html.find(".directory-footer");
+  if (html.querySelector('#scene-express-dropzone')) {
+    return;
+  }
+
+  let footer;
+  if (game.release.generation >= 13) {
+    footer = html.querySelector('footer')
+  } else {
+    footer = html.find(".directory-footer");
+  }
   const content = await renderTemplate("modules/scene-express/templates/dropzone.html", {});
-  footer.before(content);
+  if (game.release.generation >= 13) {
+    let section = await document.createElement("section")
+    section.outerHTML = content
+    footer.before(section)
+  } else {
+    footer.before(content);
+  }
   game.scene_express_drop.bind(document.getElementById("scene-express-dropzone"));
 }

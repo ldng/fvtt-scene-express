@@ -5,7 +5,7 @@
   "url": "https://github.com/ldng/fvtt-scene-express",
   "compatibility": {
     "minimum": "12",
-    "verified": "12"
+    "verified": "13"
   },
   "authors": [
     {
