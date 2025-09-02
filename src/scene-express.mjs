@@ -193,7 +193,7 @@ const onRenderSidebarTab = async (app, html, _) => {
     return;
   }
 
-  if (html.querySelector('#scene-express-dropzone')) {
+  if (typeof html.querySelector === 'function' && html.querySelector('#scene-express-dropzone')) {
     return;
   }
 
