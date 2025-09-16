@@ -205,9 +205,9 @@ const onRenderSidebarTab = async (app, html, _) => {
   }
   const content = await renderTemplate("modules/scene-express/templates/dropzone.html", {});
   if (game.release.generation >= 13) {
-    let section = await document.createElement("section")
-    section.outerHTML = content
-    footer.before(section)
+    const wrapper = document.createElement("section");
+    wrapper.innerHTML = content;
+    footer.before(wrapper.firstElementChild);
   } else {
     footer.before(content);
   }
