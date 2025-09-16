@@ -148,7 +148,6 @@ const createScene = async (savedFile, active = false) => {
     });
   } else if (!scene) {
     console.log("Scene does not exist, creating");
-    const file_name = savedFile.file.name.split(".")[0];
     scene = await getDocumentClass("Scene").create(
       {
         name: scene_name,
@@ -165,8 +164,8 @@ const createScene = async (savedFile, active = false) => {
       }
     );
   }
-  const data = await scene.createThumbnail();
-  await scene.update({thumb: data.thumb}, {diff: false});
+  const data = await scene.createThumbnail({ img: savedFile.path });
+  await scene.update({thumb: data.thumb, width: data.width, height: data.height });
 }
 
 const handleDrop = async (event) => {
