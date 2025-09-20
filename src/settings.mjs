@@ -68,6 +68,7 @@ export const registerSettings = async () => {
       0: 'SCENE.AccessibilityGM',
       2: 'SCENE.AccessibilityAll'
     },
+    default: 0
   });
 
   game.settings.register('scene-express', 'defaultTokenVision', {

@@ -5,7 +5,7 @@ const DROPZONE_TPL = "modules/scene-express/templates/dropzone.html";
 
 const dragDrop = foundry.applications.ux?.DragDrop?.implementation ?? DragDrop;
 const filePicker = foundry.applications.apps?.FilePicker?.implementation ?? FilePicker;
-const {renderTemplate} = foundry.applications.handlebars;
+const renderTpl = foundry.applications?.handlebars?.renderTemplate ?? renderTemplate;
 
 Hooks.once('init', async function () {
   console.log("Scene Express | Initializing");
@@ -136,8 +136,8 @@ const createScene = async (savedFile) => {
       active: game.settings.get("scene-express", "activateImmediately"),
     });
   }
-  const data = await scene.createThumbnail({img: savedFile.path});
-  await scene.update({thumb: data.thumb, width: data.width, height: data.height});
+  const data = await scene?.createThumbnail({img: savedFile.path});
+  await scene?.update({thumb: data.thumb, width: data.width, height: data.height});
 }
 
 const handleDrop = async (event) => {
@@ -164,7 +164,7 @@ const onRenderSidebarTab = async (app, html, _) => {
     return;
   }
 
-  const content = await renderTemplate(DROPZONE_TPL, {});
+  const content = await renderTpl(DROPZONE_TPL, {});
   const footer = html.find(".directory-footer");
   footer.before(content);
 
@@ -183,7 +183,7 @@ const onChangeSidebarTab = async (tab, _) => {
     return;
   }
 
-  const content = await renderTemplate(DROPZONE_TPL, {});
+  const content = await renderTpl(DROPZONE_TPL, {});
   tab.element.innerHTML += content;
   game.scene_express_drop.bind(document.getElementById("scene-express-dropzone"));
 }
