@@ -13,6 +13,14 @@
     "DROPZONE": "Arrastre alguna(s) imagen(es)",
     "UNHANDLED_IMAGE": "El archivo '{fileName}' no es una imagen compatible.",
     "SCENE_EXISTS": "La escena '{sceneName}' ya existe.",
-    "FILE_EXISTS": "El archivo '{fileName}' ya existe."
+    "FILE_EXISTS": "El archivo '{fileName}' ya existe.",
+    "GRID.TYPE.LABEL": "Tipo de rejilla",
+    "GRID.SIZE.LABEL": "Tamaño de la rejilla",
+    "NAVIGATION.LABEL": "Mostrar en la barra de navegación",
+    "ACCESSIBILITY": "Permisos",
+    "ACCESSIBILITY_GM": "Solo GM",
+    "ACCESSIBILITY_ALL": "Todos los jugadores",
+    "TOKENVISION.LABEL": "Visión de ficha",
+    "FOG.EXPLORATION.LABEL": "Exploración de niebla de guerra"
   }
 }

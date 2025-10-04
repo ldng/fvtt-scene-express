@@ -36,7 +36,7 @@ export const registerSettings = async () => {
   });
 
   game.settings.register('scene-express', 'defaultGridType', {
-    name: 'SCENE.FIELDS.grid.type.label',
+    name: 'SCENE_EXPRESS.GRID.TYPE.LABEL',
     scope: 'world',
     config: true,
     type: Number,
@@ -44,7 +44,7 @@ export const registerSettings = async () => {
   });
 
   game.settings.register('scene-express', 'defaultGridSize', {
-    name: 'SCENE.FIELDS.grid.size.label',
+    name: 'SCENE_EXPRESS.GRID.SIZE.LABEL',
     scope: 'world',
     config: true,
     type: Number,
@@ -52,7 +52,7 @@ export const registerSettings = async () => {
   });
 
   game.settings.register('scene-express', 'defaultInNavigation', {
-    name: 'SCENE.FIELDS.navigation.label',
+    name: 'SCENE_EXPRESS.NAVIGATION.LABEL',
     scope: 'world',
     config: true,
     type: Boolean,
@@ -60,19 +60,19 @@ export const registerSettings = async () => {
   });
 
   game.settings.register('scene-express', 'defaultPermissions', {
-    name: 'SCENE.Accessibility',
+    name: 'SCENE_EXPRESS.ACCESSIBILITY',
     scope: 'world',
     config: true,
     type: Number,
     choices: {
-      0: 'SCENE.AccessibilityGM',
-      2: 'SCENE.AccessibilityAll'
+      0: 'SCENE_EXPRESS.ACCESSIBILITY_GM',
+      2: 'SCENE_EXPRESS.ACCESSIBILITY_ALL'
     },
     default: 0
   });
 
   game.settings.register('scene-express', 'defaultTokenVision', {
-    name: 'SCENE.FIELDS.tokenVision.label',
+    name: 'SCENE_EXPRESS.TOKENVISION.LABEL',
     scope: 'world',
     config: true,
     type: Boolean,
@@ -80,7 +80,7 @@ export const registerSettings = async () => {
   });
 
   game.settings.register('scene-express', 'defaultFogExploration', {
-    name: 'SCENE.FIELDS.fog.exploration.label',
+    name: 'SCENE_EXPRESS.FOG.EXPLORATION.LABEL',
     scope: 'world',
     config: true,
     type: Boolean,

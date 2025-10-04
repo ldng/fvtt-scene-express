@@ -13,6 +13,14 @@
     "DROPZONE": "Glisser une ou plusieurs images",
     "UNHANDLED_IMAGE": "Le fichier '{fileName}' n'est pas une image prise en charge.",
     "SCENE_EXISTS": "La scene '{sceneName}' existe déjà.",
-    "FILE_EXISTS": "Le fichier '{fileName}' existe déjà."
+    "FILE_EXISTS": "Le fichier '{fileName}' existe déjà.",
+    "GRID.TYPE.LABEL": "Type de Grille",
+    "GRID.SIZE.LABEL": "Taille de Grille",
+    "NAVIGATION.LABEL": "Afficher dans la Navigation",
+    "ACCESSIBILITY": "Restriction d'accès",
+    "ACCESSIBILITY_GM": "MJ Uniquement",
+    "ACCESSIBILITY_ALL": "Tous les Joueurs",
+    "TOKENVISION.LABEL": "Vision du token",
+    "FOG.EXPLORATION.LABEL": "Exploration du brouillard de guerre"
   }
 }
