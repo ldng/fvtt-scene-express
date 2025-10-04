@@ -25,6 +25,7 @@ Hooks.once('init', async function () {
 
 Hooks.once('ready', async function () {
   game.scene_express_drop = await new dragDrop({
+    dropSelector: "#scene-express-dropzone",
     callbacks: {
       drop: handleDrop
     }
@@ -33,6 +34,7 @@ Hooks.once('ready', async function () {
     Hooks.on("changeSidebarTab", onChangeSidebarTab);
   } else {
     Hooks.on("renderSidebarTab", onRenderSidebarTab);
+    ui.sidebar.tabs.scenes.render();
   }
   console.log("Scene Express | Ready");
 });
@@ -92,7 +94,7 @@ const handleFile = async (file) => {
 }
 
 const createScene = async (savedFile) => {
-  if (savedFile === {}) return;
+  if (!savedFile.file) return;
 
   const fileExistsBehavior = game.settings.get("scene-express", "fileExistsBehavior");
 
@@ -144,6 +146,11 @@ const handleDrop = async (event) => {
   event.preventDefault();
   event.stopPropagation();
 
+  const enableSceneExpress = game.settings.get("scene-express", "enableSceneExpress");
+  if (!enableSceneExpress) {
+    return;
+  }
+
   const savedFiles = Array.from(event.dataTransfer.files).map(
     async file => await handleFile(file)
   );
@@ -157,10 +164,6 @@ const onRenderSidebarTab = async (app, html, _) => {
 
   const enableSceneExpress = game.settings.get("scene-express", "enableSceneExpress");
   if (!enableSceneExpress) {
-    return;
-  }
-
-  if (typeof html.querySelector === 'function' && html.querySelector('#scene-express-dropzone')) {
     return;
   }
 
