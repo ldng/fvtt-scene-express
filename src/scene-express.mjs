@@ -184,6 +184,7 @@ const onChangeSidebarTab = async (tab, _) => {
   }
 
   const content = await renderTpl(DROPZONE_TPL, {});
-  tab.element.innerHTML += content;
+  tab.element.insertAdjacentHTML('beforeend', content);
+
   game.scene_express_drop.bind(document.getElementById("scene-express-dropzone"));
 }
