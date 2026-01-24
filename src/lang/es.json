@@ -6,10 +6,10 @@
     "ERROR_BEHAVIOR": "Imagen ya existente",
     "ERROR_BEHAVIOR_HINT": "Qué hacer cuando ya exista una imagen con el mismo nombre.",
     "ERROR_BEHAVIOR_1": "Parrar y notificar el error",
-    "ERROR_BEHAVIOR_2": "Crear nueva escena con el archivo existente",
-    "ERROR_BEHAVIOR_3": "Sobrescribir el archivo existente y crear una nueva escena con él",
-    "IMMEDIATELY_ACTIVE": "Activo en seguida",
-    "IMMEDIATELY_ACTIVE_HINT": "La escena se crea activa o no (sólo cuando se suelta un único archivo nuevo).",
+    "ERROR_BEHAVIOR_2": "Crear escena con archivo existente",
+    "ERROR_BEHAVIOR_3": "Crear escena sobrescribiendo el archivo existente",
+    "IMMEDIATELY_ACTIVE": "Activar escena en seguida",
+    "IMMEDIATELY_ACTIVE_HINT": "Si la escena se activa o no cuando se suelta un único archivo.",
     "DROPZONE": "Arrastre alguna(s) imagen(es)",
     "UNHANDLED_IMAGE": "El archivo '{fileName}' no es una imagen compatible.",
     "SCENE_EXISTS": "La escena '{sceneName}' ya existe.",
@@ -21,6 +21,8 @@
     "ACCESSIBILITY_GM": "Solo GM",
     "ACCESSIBILITY_ALL": "Todos los jugadores",
     "TOKENVISION.LABEL": "Visión de ficha",
-    "FOG.EXPLORATION.LABEL": "Exploración de niebla de guerra"
+    "FOG.EXPLORATION.LABEL": "Exploración de niebla de guerra",
+    "DESTINATION_FOLDER": "La carpeta a la que se va a subir",
+    "DESTINATION_FOLDER_HINT": "La carpeta de destino a la que se va a subir la imagen."
   }
 }

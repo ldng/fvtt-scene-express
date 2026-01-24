@@ -11,9 +11,10 @@ Hooks.once('init', async function () {
   console.log("Scene Express | Initializing");
 
   await registerSettings();
+  const destinationFolder = game.settings.get("scene-express", "destinationFolder");
 
   try {
-    await filePicker.createDirectory("data", `worlds/${ game.world.id }/scenes/`);
+    await FilePicker.createDirectory("data", destinationFolder);
   } catch (err) {
     if (err.message.startsWith('EEXIST:')) {
       console.log("Scene Express | Scenes directory already exists in world, continuing...");
@@ -60,7 +61,7 @@ const handleFile = async (file) => {
     return {}
   }
 
-  const scenesLocation = `worlds/${ game.world.id }/scenes/`;
+  const scenesLocation = game.settings.get("scene-express", "destinationFolder");
 
   const browser = await filePicker.browse("data", scenesLocation);
   if (browser.files.includes(scenesLocation + file.name) && fileExistsBehavior === 1) {

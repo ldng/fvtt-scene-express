@@ -6,10 +6,10 @@
     "ERROR_BEHAVIOR": "L'image existe déjà",
     "ERROR_BEHAVIOR_HINT": "Que faire lorsqu'une image portant le même nom existe déjà.",
     "ERROR_BEHAVIOR_1": "Arrêter et notifier l'erreur",
-    "ERROR_BEHAVIOR_2": "Créer une nouvelle scène à partir d'un fichier existant",
-    "ERROR_BEHAVIOR_3": "Écraser le fichier existant et créer une nouvelle scène avec celui-ci",
-    "IMMEDIATELY_ACTIVE": "Active immédiatement",
-    "IMMEDIATELY_ACTIVE_HINT": "La scène est créée active ou pas (uniquement lors du dépôt d'un seul nouveau fichier).",
+    "ERROR_BEHAVIOR_2": "Créer la scène à partir d'un fichier existant",
+    "ERROR_BEHAVIOR_3": "Créer la scène en écrasant le fichier existant",
+    "IMMEDIATELY_ACTIVE": "Activer immédiatement la scène",
+    "IMMEDIATELY_ACTIVE_HINT": "Si la scène est activée ou non lorsqu'un seul fichier est déposé.",
     "DROPZONE": "Glisser une ou plusieurs images",
     "UNHANDLED_IMAGE": "Le fichier '{fileName}' n'est pas une image prise en charge.",
     "SCENE_EXISTS": "La scene '{sceneName}' existe déjà.",
@@ -21,6 +21,8 @@
     "ACCESSIBILITY_GM": "MJ Uniquement",
     "ACCESSIBILITY_ALL": "Tous les Joueurs",
     "TOKENVISION.LABEL": "Vision du token",
-    "FOG.EXPLORATION.LABEL": "Exploration du brouillard de guerre"
+    "FOG.EXPLORATION.LABEL": "Exploration du brouillard de guerre",
+    "DESTINATION_FOLDER": "Le dossier vers lequel télécharger",
+    "DESTINATION_FOLDER_HINT": "Le dossier de destination vers lequel l'image sera téléchargée."
   }
 }

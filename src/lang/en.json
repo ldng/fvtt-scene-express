@@ -5,11 +5,11 @@
     "ENABLE_HINT": "Control whether Scene Express is enabled or not.",
     "FILE_EXISTS_BEHAVIOR": "Image already exists",
     "FILE_EXISTS_BEHAVIOR_HINT": "What to do when an image with the same name already exists.",
-    "FILE_EXISTS_BEHAVIOR_1": "Stop & Notify error",
-    "FILE_EXISTS_BEHAVIOR_2": "Create new scene with existing file",
-    "FILE_EXISTS_BEHAVIOR_3": "Overwrite existing file and create new scene with it",
-    "IMMEDIATELY_ACTIVE": "Instantly active",
-    "IMMEDIATELY_ACTIVE_HINT": "The scene is created active or not (only when dropping a new single file).",
+    "FILE_EXISTS_BEHAVIOR_1": "Stop and notify error",
+    "FILE_EXISTS_BEHAVIOR_2": "Create scene with existing file",
+    "FILE_EXISTS_BEHAVIOR_3": "Create scene by overwriting existing file",
+    "IMMEDIATELY_ACTIVE": "Activate scene immediately",
+    "IMMEDIATELY_ACTIVE_HINT": "Whether the scene is activated or not when a single file is dropped.",
     "DROPZONE": "Drag in some image(s)",
     "UNHANDLED_IMAGE": "File '{fileName}' is not a supported image.",
     "SCENE_EXISTS": "Scene '{sceneName}' already exists.",
@@ -21,6 +21,8 @@
     "ACCESSIBILITY_GM": "GM Only",
     "ACCESSIBILITY_ALL": "All Players",
     "TOKENVISION.LABEL": "Token Vision",
-    "FOG.EXPLORATION.LABEL": "Fog Exploration"
+    "FOG.EXPLORATION.LABEL": "Fog Exploration",
+    "DESTINATION_FOLDER": "The folder to upload to",
+    "DESTINATION_FOLDER_HINT": "The destination folder to which the image will be uploaded."
   }
 }

@@ -86,4 +86,14 @@ export const registerSettings = async () => {
     type: Boolean,
     default: false
   });
+
+  game.settings.register('scene-express', 'destinationFolder', {
+    name: 'SCENE_EXPRESS.DESTINATION_FOLDER',
+    hint: 'SCENE_EXPRESS.DESTINATION_FOLDER_HINT',
+    scope: 'world',
+    config: true,
+    type: String,
+    default: `worlds/${game.world.id}/scenes/`,
+    filePicker: 'folder'
+  });
 }
