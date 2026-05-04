@@ -126,21 +126,37 @@ const createScene = async (savedFile) => {
     fogExploration: game.settings.get("scene-express", "defaultFogExploration"),
     ownership: {
       default: game.settings.get("scene-express", "defaultPermissions"),
-    }
+    },
+    /* v14+ */
+    levels: [
+      {
+        name: "Background",
+        background: {
+          color: "#000000",
+          src: savedFile.path
+        }
+      }
+    ]
   }
 
   if (scene && fileExistsBehavior >= 2) {
     console.log("Scene already exists and fileExistsBehavior is set to 2 or 3, updating");
-    await scene.update(ctx);
+    if (game.version > 14) {
+      let level = scene.levels.find(level => level.name === "Background");
+      await scene.levels.delete(level.key);
+      await scene.update(ctx);
+    } else {
+      await scene.update(ctx);
+    }
   } else if (!scene) {
     console.log("Scene does not exist, creating");
-    scene = await getDocumentClass("Scene").create({
+    scene = await getDocumentClass("Scene").implementation.create({
       ...ctx,
       active: game.settings.get("scene-express", "activateImmediately"),
     });
   }
   const data = await scene?.createThumbnail({img: savedFile.path});
-  await scene?.update({thumb: data.thumb, width: data.width, height: data.height});
+  await scene?.update({thumb: data.thumb});
 }
 
 const handleDrop = async (event) => {
