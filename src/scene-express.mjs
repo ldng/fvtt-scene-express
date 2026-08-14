@@ -155,7 +155,12 @@ const createScene = async (savedFile) => {
       active: game.settings.get("scene-express", "activateImmediately"),
     });
   }
-  const data = await scene?.createThumbnail({img: savedFile.path});
+
+  const bitmap = await createImageBitmap(savedFile.file);
+  const texture = PIXI.Texture.from(bitmap);
+  await scene?.update({width: texture.width, height: texture.height});
+
+  const data = await scene?.createThumbnail();
   await scene?.update({thumb: data.thumb});
 }
 
